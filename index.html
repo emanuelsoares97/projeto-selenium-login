@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="logo.png" alt="SISQUAL WFM Logo"> <!-- Substitua 'logo.png' pelo caminho correto do logo -->
+        </div>
+        <div class="login-form">
+            <form action="submit_login.php" method="POST"> <!-- Substitua 'submit_login.php' pelo seu script de tratamento -->
+                <div class="form-group">
+                    <label for="username">Utilizador</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit">Iniciar sessão</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
