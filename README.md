@@ -1,26 +1,55 @@
-# projeto-selenium-login
+Projeto Selenium Login
 
-## Descrição
-Este repositório contém um script de automação Selenium para efetuar login automaticamente em um portal específico. O projeto visa demonstrar o uso do Selenium para automação de testes de interfaces web, usando Python. Este script é útil para testar processos de autenticação em desenvolvimento e produção.
 
-## Pré-requisitos
-- Python 3.8+
-- Selenium WebDriver
+Descrição
+Este repositório contém um script de automação Selenium que faz login automaticamente numa página web simulada. O objetivo inicial era apenas testar a automação do login, mas o projeto acabou por evoluir e agora inclui:
 
-## Instalação
-Clone o repositório e instale as dependências necessárias:
-```bash
+Automação de login com Python + Selenium
+Interface web com HTML, CSS e JS
+Simulação de validação de login com PHP (sem base de dados)
+
+A ideia não é criar um sistema completo, mas sim um ambiente controlado para testar automações e aprender mais sobre Selenium.
+
+Tecnologias Utilizadas
+Python 3.8+ → Automação com Selenium
+Selenium WebDriver → Controle do navegador
+HTML + CSS + JS → Interface gráfica da aplicação
+PHP → Simulação do backend (validação de login)
+
+Instalação e Como Usar
+Clonar o repositório
 git clone https://github.com/seuusuario/projeto-selenium-login.git
 cd projeto-selenium-login
+
+Criar ambiente virtual e instalar dependências
 python -m venv venv
-source venv/bin/activate  # ou 'venv\Scripts\activate' no Windows
+source venv/bin/activate  # No Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
+Iniciar o Servidor Local
+php -S localhost:8000
+Depois disso, a página estará disponível em http://localhost:8000/index.html.
+
+Executar o Script de Automação
 python login_script.py
 
-### Considerações Finais
+O Selenium irá abrir o navegador, preencher os campos e fazer login sozinho.~
 
-- **Consistência**: Mantenha a formatação consistente para facilitar a leitura e compreensão.
-- **Informação Completa**: Mesmo que o uso seja simples, uma breve descrição pode ajudar a esclarecer o propósito do comando para novos usuários.
+projeto-selenium-login/
+│── dados/              # (Se precisar guardar ficheiros CSV ou JSON futuramente)
+│── estilos/            # Arquivos CSS para o design
+│── imagens/            # Imagens usadas no site
+│── util/               # Scripts JS para validações e interações
+│── venv/               # Ambiente virtual do Python (não deve ser enviado para o Git)
+│── index.html          # Página inicial (formulário de login)
+│── pagregisto.html     # Página que aparece após login bem-sucedido
+│── login_script.py     # Script Selenium para automação do login
+│── submit_login.php    # Simulação de backend para validar login
+│── requirements.txt    # Dependências do projeto
+│── README.md           # Documentação do projeto
+│── .gitignore          # Arquivos que devem ser ignorados no Git
 
-Esses ajustes ajudarão a manter seu `README.md` limpo e profissional, facilitando para qualquer pessoa entender e começar a usar seu projeto rapidamente. Se precisar de mais ajuda ou tiver outras perguntas, estou à disposição!
+Considerações Finais
+Este projeto começou apenas como um script para login automático no Selenium, mas acabou por incluir uma simulação de uma página de login real, onde o Selenium pode interagir como se fosse um utilizador normal.
+
+Se quiseres contribuir ou sugerir melhorias, estás à vontade!
