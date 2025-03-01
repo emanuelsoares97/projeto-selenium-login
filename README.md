@@ -36,7 +36,7 @@ python login_script.py
 O Selenium irá abrir o navegador, preencher os campos e fazer login sozinho.~
 
 projeto-selenium-login/
-│── dados/              # (Se precisar guardar ficheiros CSV ou JSON futuramente)
+│── dados/              # (Se precisar guardar ficheiros CSV ou JSON futuramente) #os users estao aqui dentro user1 pass1
 │── estilos/            # Arquivos CSS para o design
 │── imagens/            # Imagens usadas no site
 │── util/               # Scripts JS para validações e interações
