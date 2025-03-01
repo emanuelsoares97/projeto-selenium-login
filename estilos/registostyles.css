@@ -1,59 +1,125 @@
-@charset "UTF-8";
-
 *{
     margin: 0px;
     padding: 0px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
 
-.header, .logo {
-    margin: 20px;
-    border-radius: 50%;
+header > img {
     width: 100px;
-    text-align: center;
-    padding: 10px 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px black;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 200px;
-}
-
-.card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    border-radius: 30%;
-}
-
-button {
-    background-color: #007bff;
+/* Estilizar o botão de sair */
+.sair-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #dc3545;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.sair-btn:hover {
+    background-color: #c82333;
 }
 
+
+div.container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+.card{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px black;
+}
+.card img{
+
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* Modal oculto por padrão */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+/* Botões do Modal */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirmar {
+    background-color: #28a745;
+    color: white;
+}
+
+.confirmar:hover {
+    background-color: #218838;
+}
+
+.cancelar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cancelar:hover {
+    background-color: #c82333;
+}
+
+/* Barra de Sucesso */
+.barra-sucesso {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}

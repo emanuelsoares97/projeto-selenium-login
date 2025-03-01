@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,15 @@
 <body>
     <header>
         <img src="./imagens/imgsimulacao.webp" alt="Logo" class="logo"> 
+        <button id="btnSair" class="sair-btn">Sair</button> <!-- Botão de Sair -->
     </header>
+    
+    
     <div class="container">
         <div class="card">
             <img src="./imagens/registarimg.webp" alt="Registrar"> 
             <h3>Tarefas diárias</h3>
-            <button>Registrar</button>
+            <button id="btnRegistrar">Registrar</button> 
         </div>
         <div class="card">
             <img src="./imagens/pedidosimg.webp" alt="Marcar">
@@ -22,5 +25,24 @@
             <button>Ver marcações</button>
         </div>
     </div>
+
+    <!-- Pop-up para Registro -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Confirmar Registro</h2>
+            <p>Hora Atual: <span id="horaAtual"></span></p>
+            <div class="modal-buttons">
+                <button id="btnCancelar" class="cancelar">Cancelar</button>
+                <button id="btnConfirmar" class="confirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de sucesso -->
+    <div id="barraSucesso" class="barra-sucesso">Registro com sucesso!</div>
+
+   
+    <script src="scripts/registo.js"></script>
+    <script src="scripts/botaosair.js"></script>
 </body>
 </html>

@@ -1,18 +1,20 @@
 <?php
-// Simulação de dados de utilizador e pass
-$utilizadorCorreto = "user1";
+// Simulação de usuário e senha corretos
+$usuarioCorreto = "user1";
 $senhaCorreta = "pass1";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $utilizador = $_POST['username'];
+    $usuario = $_POST['username'];
     $senha = $_POST['password'];
 
-    if ($utilizador === $utilizadorCorreto && $senha === $senhaCorreta) {
-        // Redirecionar para a página de registro
-        header("Location: pagregisto.html"); // Certifique-se de que o nome do arquivo está correto
+    if ($usuario === $usuarioCorreto && $senha === $senhaCorreta) {
+        // Login bem-sucedido → Redireciona para a página de registro
+        header("Location: pagregisto.html");
         exit();
     } else {
-        echo "Usuário ou senha incorretos!";
+        // Login falhou → Redireciona para o login com erro
+        header("Location: index.html?erro=1");
+        exit();
     }
 } else {
     echo "Método inválido.";
