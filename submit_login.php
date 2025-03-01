@@ -1,15 +1,15 @@
 <?php
-// Simulação de dados de usuário e senha válidos
-$usuarioCorreto = "usuario";
-$senhaCorreta = "senha123";
+// Simulação de dados de utilizador e pass
+$utilizadorCorreto = "user1";
+$senhaCorreta = "pass1";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['username'];
+    $utilizador = $_POST['username'];
     $senha = $_POST['password'];
 
-    if ($usuario === $usuarioCorreto && $senha === $senhaCorreta) {
+    if ($utilizador === $utilizadorCorreto && $senha === $senhaCorreta) {
         // Redirecionar para a página de registro
-        header("Location: pagregisto.html"); // Ajuste o nome do arquivo conforme necessário
+        header("Location: pagregisto.html"); // Certifique-se de que o nome do arquivo está correto
         exit();
     } else {
         echo "Usuário ou senha incorretos!";
